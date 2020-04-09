@@ -1,12 +1,15 @@
 class Dog:
     dog_counter = 0
 
-    def __init__(self, name, year_of_birth, status):
+    def __init__(self, name, year_of_birth, status, id=None):
         self.name = name
         self.year_of_birth = year_of_birth
         self.status = status
-        self.id = Dog.dog_counter
-        Dog.dog_counter += 1
+        if id:
+            self.id = id
+        else:
+            self.id = Dog.dog_counter
+            Dog.dog_counter += 1
 
     def save(self):
         DogDBManagerMock.save_dog(self)
