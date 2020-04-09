@@ -36,9 +36,9 @@ class DogDBManagerMock:
 
     @staticmethod
     def get_dog(id):
-        return Dog(1, "Psiulek", 2010, "for adoption")
+        return Dog("Psiulek", 2010, "for adoption")
 
     @staticmethod
     def get_dogs():
         """ Return all the dogs from the database as a list. """
-        return [Dog(0, "Tali", 2009, "adopted"), Dog(1, "Baksiu", 2010, "for adoption")]
+        return [Dog("Tali", 2009, "adopted"), Dog("Baksiu", 2010, "for adoption")]
